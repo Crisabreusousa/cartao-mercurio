@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins',Arial, sans-serif;/*Fonte  mais moderna*/
+    background: linear-gradient(to right, #004aad, #00bfff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+.card  {
+    background: rgba(255, 255, 255, 0.8);
+     /* Tornar a área do card semi-transparente */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Planeta Mercúrio no fundo, semi-transparente */
+.card::before {
+    content: "";
+    background: url('color.png') no-repeat center bottom;
+    background-size: cover; /* faz a imagem cobrir toda a largura */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* agora cobre toda a largura todo o card */
+    height: 100%; /* Ajuste fino */
+    opacity: 0.15; /* mantem a transparência */
+    z-index: 0; /* Garante que a imagem fique atrás do texto */
+}
+
+/* Mantendo os textos e botões acima */
+h1 {
+    color: #1a1a1b;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p, ul {
+    color: #444;
+    font-size: 16px;
+}
+
+.whatsapp-button {
+    position: absolute;
+    bottom: 10px; /* Ajusta a posição para ficar no final do card */
+    left: 20%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    display:inline-block;
+}
+
+.whatsapp-icon {
+    width:  50px !important;  /* Força o tamanho para garantir que está sendo aplicado */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover .whatsapp-icon {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+
+
+.card img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+h1, p, .whatsapp-button {
+    position: relative;
+    z-index: 1; /* Mantém os textos e botões acima da imagem */
+    color: #1E3A8A;
+}
+
+
